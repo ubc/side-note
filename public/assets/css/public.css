@@ -1,0 +1,84 @@
+/* This stylesheet is used to style the public-facing components of the plugin. */
+.side-note-content-wrap{
+	padding: 10px;
+}
+.side-note-content-wrap.collapse{
+	border:none;
+	padding: 0;
+	opacity: 0;
+}
+.side-note-content-wrap.in{
+	border:2px solid #CCC;
+	padding: 10px;
+	opacity: 1;
+}
+
+.side-note-content-wrap {
+	border:2px solid #CCC;
+	background: transparent;
+	z-index: 1;
+	margin-left: 70px;
+}
+.side-note-content-wrap:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.side-note-content-wrap-height{
+	float: left;
+	min-height: 60px;
+}
+.side-note{
+	position: relative;
+	margin-bottom: 20px;
+	background: #FFF;
+	clear: both;
+}
+.side-note-half {
+	width: 50%;
+	float: left;
+}
+.side-note-icon-wrap {
+    float: left;
+    padding-left: 0;
+    padding-top: 50px;
+    text-align: center;
+    width: 60px;
+}
+.side-note-right .side-note-icon-wrap{
+	float: right;
+}
+.side-note-right .side-note-content-wrap {
+	margin-left: 0;
+	margin-right: 70px;
+}
+.side-note .side-note-icon{
+	position: absolute;
+	top:10px;
+	font-size: 40px;
+	z-index: 2;
+}
+.side-note .side-note-icon:before{
+	color:#999	;
+}
+
+.side-note .side-note-expand:after{
+	content: "";
+	width: 16px;
+	height:16px;
+	position: absolute;
+	top:0;
+	left: 20px;
+	font-size: 16px;
+}
+.side-note .side-note-expand.collapsed:after{
+	content: "";
+}
+.side-note-expand:before,
+.side-note-expand:after,
+.side-note-expand{
+	cursor: pointer;
+}
