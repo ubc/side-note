@@ -11,7 +11,7 @@
  * @copyright 2014 CTLT UBC
  *
  * @wordpress-plugin
- * Side Notes:        Side Note
+ * Plugin Name:       Side Note
  * Plugin URI:        github.com/ubc/side-note
  * Description:       Add 
  * Version:           0.5
