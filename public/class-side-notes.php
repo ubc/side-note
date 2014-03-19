@@ -320,13 +320,13 @@ class Side_Note {
 		
 		if( is_array($atts) ) {
 			foreach( $atts as $key => $attr_value ) {
-			if( is_numeric( $key ) )
-				$in_array[] = $attr_value;
-		}
+				if( is_numeric( $key ) )
+					$in_array[] = $attr_value;
+			}
 		}
 		
 		
-		$collasted  	= in_array( 'collasted', $in_array   ) ? true : false;
+		$collapsed  	= in_array( 'collapsed', $in_array   ) ? true : false;
 		$collapsible 	= in_array( 'collapsible', $in_array ) ? true : false;
 		
 		$side_note_class = array( 'side-note' );
@@ -339,7 +339,7 @@ class Side_Note {
 		
 
 		
-		if( $collasted ) {
+		if( $collapsed ) {
 			$icon_data = ' data-toggle="collapse" data-target="#side-note-'.$this->shortcode_counter.'" ';
 			$icon_class = ' side-note-expand collapsed ';
 			$shell_class = 'collapse';
@@ -349,9 +349,9 @@ class Side_Note {
 			$shell_class = ' collapse in ';
 		}
 		
-		if( !$collapsible && !$collasted ){
+		if( !$collapsible && !$collapsed ){
 			$shell_class = $icon_class = $icon_data = '';
-			//var_dump($this->shortcode_counter.': cleared'.$collapsible.$collasted);
+			//var_dump($this->shortcode_counter.': cleared'.$collapsible.$collapsed);
 		}
 
 		$icon = ( empty($icon) ? 'note': $icon );
@@ -379,3 +379,4 @@ class Side_Note {
 	}
 
 }
+
