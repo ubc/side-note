@@ -12,12 +12,14 @@
 	padding: 10px;
 	opacity: 1;
 }
-
+.side-note-title {
+	text-align: center;
+}
 .side-note-content-wrap {
 	border:2px solid #CCC;
 	background: transparent;
 	z-index: 1;
-	margin-left: 70px;
+	margin-left: 75px;
 }
 .side-note-content-wrap:after {
 	visibility: hidden;
@@ -47,20 +49,28 @@
     padding-top: 50px;
     text-align: center;
     width: 60px;
-}
-.side-note-right .side-note-icon-wrap{
-	float: right;
-}
-.side-note-right .side-note-content-wrap {
-	margin-left: 0;
-	margin-right: 70px;
+    left: 0;
 }
 .side-note .side-note-icon{
 	position: absolute;
 	top:10px;
 	font-size: 40px;
 	z-index: 2;
+	width: 60px;
+	left: 1px;
 }
+.side-note-right .side-note-icon-wrap{
+	float: right;
+}
+.side-note-right .side-note-content-wrap {
+	margin-left: 0;
+	margin-right: 75px;
+}
+.side-note-right .side-note-icon {
+	right: 0;
+	left: auto;
+}
+
 .side-note .side-note-icon:before{
 	color:#999	;
 }
@@ -71,7 +81,7 @@
 	height:16px;
 	position: absolute;
 	top:0;
-	left: 20px;
+	left: 35px;
 	font-size: 16px;
 }
 .side-note .side-note-expand.collapsed:after{

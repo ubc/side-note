@@ -334,8 +334,11 @@ class Side_Note {
 		if( 'right' == $align ){
 			$side_note_class[] = 'side-note-right';
 		}
-		if( in_array( 'half', $in_array ) )
-			$side_note_class[] = 'side-note-half';
+		/**
+		 * commented out this section for now.  Float right causes issues with text at times.  Dummy books don't have half either!
+		 */
+// 		if( in_array( 'half', $in_array ) )
+// 			$side_note_class[] = 'side-note-half';
 		
 
 		
@@ -358,7 +361,7 @@ class Side_Note {
 		$title = ( !empty($title) ? $title : $icon );
 		$icons = $this->list_of_icons();
 
-		return '<div class="'.implode(' ', $side_note_class ).'"><div class="side-note-icon-wrap side-note-icon-wrap"><i class="side-note-icon '.$icons[$icon].$icon_class.'" '.$icon_data.'></i>'.$title.'</div><div id="side-note-'.$this->shortcode_counter.'" class="side-note-content-wrap '.$shell_class.'"><span class="side-note-content-wrap-height"> </span>'.do_shortcode( $content ).'</div></div>';
+		return '<div class="'.implode(' ', $side_note_class ).'"><div class="side-note-icon-wrap side-note-icon-wrap"><i class="side-note-icon '.$icons[$icon].$icon_class.'" '.$icon_data.'></i><span class="side-note-title">'.$title.'</span></div><div id="side-note-'.$this->shortcode_counter.'" class="side-note-content-wrap '.$shell_class.'"><span class="side-note-content-wrap-height"> </span>'.do_shortcode( $content ).'</div></div>';
 	}
 	/**
 	 * Register and enqueue public-facing style sheet.
@@ -379,4 +382,3 @@ class Side_Note {
 	}
 
 }
-

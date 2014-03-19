@@ -2,7 +2,7 @@
 Contributors: enej
 Tags: shortcode, sides
 Requires at least: 3.5.1
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,8 +18,6 @@ for example
 `[side-note icon='hot' collapsed ] This is a side note [/side-note]`
 `[side-note icon='hot' align="right" ] This is a side note [/side-note]` 
 note: only align left: default and align right work
-
-`[side-note icon='hot' half ] This is a side note [/side-note]` make the sidenote take  up only half the space.
 
 `[side-note icon='hot' title="Note" ] This is a side note [/side-note]` Make the text below the icon display 'Note'
 
