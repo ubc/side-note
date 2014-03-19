@@ -263,8 +263,10 @@ class Side_Note {
 
 
 	public function add_shortcodes() {
-
-		add_shortcode( 'ref', array( $this, 'ref_shortcode' ) );
+		/**
+		 * commented out for now until later.
+		 */
+// 		add_shortcode( 'ref', array( $this, 'ref_shortcode' ) );
 		add_shortcode( 'side-note', array( $this, 'side_note_shortcode' ) );
 
 	}

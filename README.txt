@@ -13,19 +13,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Create shortcodes that will allow you to add side notes to you pages or posts. 
 
 for example
-`[side-note collapsible] This is a side note [/side-note]`
-`[side-note icon='hot'] This is a side note [/side-note]`
-`[side-note icon='hot' collapsed ] This is a side note [/side-note]`
-`[side-note icon='hot' align="right" ] This is a side note [/side-note]` 
-note: only align left: default and align right work
+`[side-note collapsible]collapsible, default to expanded[/side-note]`
+`[side-note collasted]collapsed, meaning it is collapsible, but initial state is collapsed[/side-note]`
+`[side-note align=right]aligns the icon to the right[/side-note]`
 
-`[side-note icon='hot' title="Note" ] This is a side note [/side-note]` Make the text below the icon display 'Note'
-
-
-List of possible icons:
-flag, hot, fire, world, tint, note, puzzle, clue, lab, experiment, try, 
-beaker, book, read, reading, certificate,seal, stamp, lightbulb, idea, 
-ideas, key, win, trophy, heart, love, group, groups, bell
+`[side-note icon='flag']`
+`[side-note icon='hot']`
+`[side-note icon='fire']`
+`[side-note icon='world']`
+`[side-note icon='tint']`
+`[side-note icon='note']`
+`[side-note icon='puzzle']`
+`[side-note icon='clue']`
+`[side-note icon='lab']`
+`[side-note icon='experiment']`
+`[side-note icon='try']`
+`[side-note icon='beaker']`
+`[side-note icon='book']`
+`[side-note icon='read']`
+`[side-note icon='reading']`
+`[side-note icon='certificate']`
+`[side-note icon='seal']`
+`[side-note icon='stamp']`
+`[side-note icon='lightbulb']`
+`[side-note icon='idea']`
+`[side-note icon='ideas']`
+`[side-note icon='key']`
+`[side-note icon='win']`
+`[side-note icon='trophy']`
+`[side-note icon='heart']`
+`[side-note icon='love']`
+`[side-note icon='group']`
+`[side-note icon='groups']`
+`[side-note icon='bell']`
 
 == Installation ==
 
