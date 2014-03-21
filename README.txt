@@ -46,6 +46,9 @@ for example
 `[side-note icon='group']`
 `[side-note icon='groups']`
 `[side-note icon='bell']`
+`[side-note icon='video']`
+`[side-note icon='play']`
+`[side-note icon='youtube']`
 
 == Installation ==
 

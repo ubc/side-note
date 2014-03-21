@@ -301,7 +301,10 @@ class Side_Note {
 			'love'		=> 'icon-heart',
 			'group'		=> 'icon-group',
 			'groups'	=> 'icon-group',
-			'bell'		=> 'icon-bell'
+			'bell'		=> 'icon-bell',
+			'video'		=> 'icon-facetime-video',
+			'play'		=> 'icon-play',
+			'youtube'	=> 'icon-youtube-alt'
 
 			);
 
