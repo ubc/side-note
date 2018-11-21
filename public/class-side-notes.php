@@ -3,7 +3,7 @@
  * Side Notes.
  *
  * @package   Side_Note
- 
+
  * @license   GPL-2.0+
  * @link      http://example.com
  * @copyright 2014 Your Name or Company Name
@@ -72,9 +72,6 @@ class Side_Note {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		add_action( 'init', array( $this, 'add_shortcodes' ) );
-
-		// Activate plugin when new blog is added
-		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
 
 		// Load public-facing style sheet and JavaScript.
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
@@ -186,24 +183,6 @@ class Side_Note {
 
 	}
 
-	/**
-	 * Fired when a new site is activated with a WPMU environment.
-	 *
-	 * @since    1.0.0
-	 *
-	 * @param    int    $blog_id    ID of the new blog.
-	 */
-	public function activate_new_site( $blog_id ) {
-
-		if ( 1 !== did_action( 'wpmu_new_blog' ) ) {
-			return;
-		}
-
-		switch_to_blog( $blog_id );
-		self::single_activate();
-		restore_current_blog();
-
-	}
 
 	/**
 	 * Get all blog ids of blogs in the current network that are:
@@ -311,7 +290,7 @@ class Side_Note {
 	}
 
 	public function side_note_shortcode( $atts, $content ) {
-		
+
 		$this->shortcode_counter++;
 
 		extract( shortcode_atts( array(
@@ -322,20 +301,20 @@ class Side_Note {
 		), $atts ) );
 
 		$in_array = array();
-		
+
 		if( is_array($atts) ) {
 			foreach( $atts as $key => $attr_value ) {
 				if( is_numeric( $key ) )
 					$in_array[] = $attr_value;
 			}
 		}
-		
-		
+
+
 		$collapsed  	= in_array( 'collapsed', $in_array   ) ? true : false;
 		$collapsible 	= in_array( 'collapsible', $in_array ) ? true : false;
-		
+
 		$side_note_class = array( 'side-note' );
-		
+
 		if( 'right' == $align ){
 			$side_note_class[] = 'side-note-right';
 		}
@@ -344,9 +323,9 @@ class Side_Note {
 		 */
 // 		if( in_array( 'half', $in_array ) )
 // 			$side_note_class[] = 'side-note-half';
-		
 
-		
+
+
 		if( $collapsed ) {
 			$icon_data = ' data-toggle="collapse" data-target="#side-note-'.$this->shortcode_counter.'" ';
 			$icon_class = ' side-note-expand collapsed ';
@@ -356,7 +335,7 @@ class Side_Note {
 			$icon_class = ' side-note-expand';
 			$shell_class = ' collapse in ';
 		}
-		
+
 		if( !$collapsible && !$collapsed ){
 			$shell_class = $icon_class = $icon_data = '';
 			//var_dump($this->shortcode_counter.': cleared'.$collapsible.$collapsed);

@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name:       Side Note
  * Plugin URI:        github.com/ubc/side-note
- * Description:       Add 
+ * Description:       Add
  * Version:           0.5
  * Text Domain:       side-notes-locale
  * License:           GPL-2.0+
@@ -38,8 +38,8 @@ require_once( plugin_dir_path( __FILE__ ) . 'public/class-side-notes.php' );
  * When the plugin is deleted, the uninstall.php file is loaded.
  *
  */
-register_activation_hook( __FILE__, array( 'Side_Notes', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Side_Notes', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'Side_Note', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'Side_Note', 'deactivate' ) );
 
 /*
 
